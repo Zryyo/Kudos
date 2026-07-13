@@ -1,0 +1,33 @@
+{
+  "document": {
+    "id": "1NovaBrewMarketingPlanMockDocId0000",
+    "name": "Group 4 \u2014 NovaBrew Marketing Plan",
+    "url": "https://docs.google.com/document/d/1NovaBrewMarketingPlanMockDocId0000/edit"
+  },
+  "run": {
+    "triggered_by": "teacher_88",
+    "trigger_type": "teacher_initiated",
+    "project_start": "2026-06-01",
+    "project_end": "2026-06-14"
+  },
+  "students": [
+    {
+      "student_id": "s_101",
+      "name": "Amara Okonkwo",
+      "email": "amara.o@example.edu",
+      "permission_id": "10293847560001"
+    },
+    {
+      "student_id": "s_102",
+      "name": "Ben Tan",
+      "email": "ben.t@example.edu",
+      "permission_id": "10293847560002"
+    },
+    {
+      "student_id": "s_103",
+      "name": "Devon Reyes",
+      "email": "devon.r@example.edu",
+      "permission_id": "10293847560003"
+    }
+  ]
+}

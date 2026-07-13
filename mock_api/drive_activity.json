@@ -1,0 +1,204 @@
+{
+  "activities": [
+    {
+      "primaryActionDetail": {
+        "edit": {}
+      },
+      "actors": [
+        {
+          "user": {
+            "knownUser": {
+              "personName": "people/10293847560001",
+              "isCurrentUser": false
+            }
+          }
+        }
+      ],
+      "targets": [
+        {
+          "driveItem": {
+            "name": "items/1NovaBrewMarketingPlanMockDocId0000",
+            "title": "Group 4 \u2014 NovaBrew Marketing Plan",
+            "file": {}
+          }
+        }
+      ],
+      "timestamp": "2026-06-02T09:14:00.000Z"
+    },
+    {
+      "primaryActionDetail": {
+        "edit": {}
+      },
+      "actors": [
+        {
+          "user": {
+            "knownUser": {
+              "personName": "people/10293847560002",
+              "isCurrentUser": false
+            }
+          }
+        }
+      ],
+      "targets": [
+        {
+          "driveItem": {
+            "name": "items/1NovaBrewMarketingPlanMockDocId0000",
+            "title": "Group 4 \u2014 NovaBrew Marketing Plan",
+            "file": {}
+          }
+        }
+      ],
+      "timestamp": "2026-06-04T13:40:00.000Z"
+    },
+    {
+      "primaryActionDetail": {
+        "edit": {}
+      },
+      "actors": [
+        {
+          "user": {
+            "knownUser": {
+              "personName": "people/10293847560001",
+              "isCurrentUser": false
+            }
+          }
+        }
+      ],
+      "targets": [
+        {
+          "driveItem": {
+            "name": "items/1NovaBrewMarketingPlanMockDocId0000",
+            "title": "Group 4 \u2014 NovaBrew Marketing Plan",
+            "file": {}
+          }
+        }
+      ],
+      "timestamp": "2026-06-05T10:05:00.000Z"
+    },
+    {
+      "primaryActionDetail": {
+        "edit": {}
+      },
+      "actors": [
+        {
+          "user": {
+            "knownUser": {
+              "personName": "people/10293847560002",
+              "isCurrentUser": false
+            }
+          }
+        }
+      ],
+      "targets": [
+        {
+          "driveItem": {
+            "name": "items/1NovaBrewMarketingPlanMockDocId0000",
+            "title": "Group 4 \u2014 NovaBrew Marketing Plan",
+            "file": {}
+          }
+        }
+      ],
+      "timestamp": "2026-06-07T16:22:00.000Z"
+    },
+    {
+      "primaryActionDetail": {
+        "edit": {}
+      },
+      "actors": [
+        {
+          "user": {
+            "knownUser": {
+              "personName": "people/10293847560003",
+              "isCurrentUser": false
+            }
+          }
+        }
+      ],
+      "targets": [
+        {
+          "driveItem": {
+            "name": "items/1NovaBrewMarketingPlanMockDocId0000",
+            "title": "Group 4 \u2014 NovaBrew Marketing Plan",
+            "file": {}
+          }
+        }
+      ],
+      "timestamp": "2026-06-09T21:55:00.000Z"
+    },
+    {
+      "primaryActionDetail": {
+        "edit": {}
+      },
+      "actors": [
+        {
+          "user": {
+            "knownUser": {
+              "personName": "people/10293847560001",
+              "isCurrentUser": false
+            }
+          }
+        }
+      ],
+      "targets": [
+        {
+          "driveItem": {
+            "name": "items/1NovaBrewMarketingPlanMockDocId0000",
+            "title": "Group 4 \u2014 NovaBrew Marketing Plan",
+            "file": {}
+          }
+        }
+      ],
+      "timestamp": "2026-06-10T11:30:00.000Z"
+    },
+    {
+      "primaryActionDetail": {
+        "edit": {}
+      },
+      "actors": [
+        {
+          "user": {
+            "knownUser": {
+              "personName": "people/10293847560003",
+              "isCurrentUser": false
+            }
+          }
+        }
+      ],
+      "targets": [
+        {
+          "driveItem": {
+            "name": "items/1NovaBrewMarketingPlanMockDocId0000",
+            "title": "Group 4 \u2014 NovaBrew Marketing Plan",
+            "file": {}
+          }
+        }
+      ],
+      "timestamp": "2026-06-13T22:48:00.000Z"
+    },
+    {
+      "primaryActionDetail": {
+        "edit": {}
+      },
+      "actors": [
+        {
+          "user": {
+            "knownUser": {
+              "personName": "people/10293847560003",
+              "isCurrentUser": false
+            }
+          }
+        }
+      ],
+      "targets": [
+        {
+          "driveItem": {
+            "name": "items/1NovaBrewMarketingPlanMockDocId0000",
+            "title": "Group 4 \u2014 NovaBrew Marketing Plan",
+            "file": {}
+          }
+        }
+      ],
+      "timestamp": "2026-06-14T23:41:00.000Z"
+    }
+  ]
+}
