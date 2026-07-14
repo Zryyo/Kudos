@@ -18,13 +18,18 @@ export default function DashboardView({ reports, onSelectReport, onNewReport }: 
         
         {/* Header & New Analysis Button */}
         <header className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
-          <div>
-            <h1 className="text-3xl md:text-4xl font-extrabold text-slate-700 tracking-wide uppercase mb-2">
-              Project Dashboard
-            </h1>
-            <p className="text-slate-500 font-medium">Select a group project document to view its contribution analysis.</p>
-          </div>
-          
+            <div className="flex items-center gap-4">
+                <div className="w-15 h-15 bg-white rounded-xl shadow-sm border border-slate-200 flex items-center justify-center overflow-hidden shrink-0">
+                    <img src="/kudos-logo.svg" alt="Kudos Logo" className="w-10 h-10" />
+                </div>
+                
+                <div>
+                    <h1 className="text-3xl md:text-4xl font-extrabold text-slate-700 tracking-wide uppercase mb-1">
+                        Kudos Dashboard
+                    </h1>
+                    <p className="text-slate-500 font-medium">Select a group project document to view its contribution analysis.</p>
+                </div>
+            </div>
           {!showForm && (
             <button 
               onClick={() => setShowForm(true)}
