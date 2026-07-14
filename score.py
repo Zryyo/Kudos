@@ -21,6 +21,50 @@ def _ownership(student_contributions: list[dict], all_contributions: list[dict])
     student_surviving = sum(c["word_count"] * c["survived"] for c in student_contributions)
     return student_surviving / total_surviving
 
+def _basic_classify(text: str) -> dict:
+    """
+    A rule-based (non-LLM) classifier to categorize text contributions.
+    Evaluates word count, length, and lexical diversity to guess the tier.
+    """
+    if not text or not text.strip():
+        return {"tier": "low_effort", "confidence": 1.0}
+
+    # Clean text to get accurate word metrics
+    words = text.split()
+    word_count = len(words)
+    char_count = len(text.strip())
+    
+    if word_count == 0:
+        return {"tier": "low_effort", "confidence": 1.0}
+
+    # Heuristic metrics
+    unique_words = len(set(word.lower() for word in words))
+    lexical_diversity = unique_words / word_count
+    avg_word_length = char_count / word_count
+
+    # 1. LOW EFFORT
+    # Triggered by very short additions, highly repetitive text (spam), 
+    # or single long strings without spaces (keysmashing).
+    if word_count <= 6 or lexical_diversity < 0.3 or avg_word_length < 2.5:
+        # Confidence increases the closer word count is to 0
+        confidence = max(0.6, 1.0 - (word_count / 15.0))
+        return {"tier": "low_effort", "confidence": round(confidence, 2)}
+
+    # 2. SUBSTANTIVE
+    # Triggered by longer paragraphs with healthy word variation.
+    elif word_count >= 35 and lexical_diversity >= 0.5 and avg_word_length >= 4.0:
+        # Confidence scales up with text length, capping at 0.98
+        confidence = min(0.98, 0.70 + (word_count / 300.0))
+        return {"tier": "substantive", "confidence": round(confidence, 2)}
+
+    # 3. MODERATE
+    # Everything that falls in between (e.g., 7 to 34 words).
+    else:
+        # Confidence is highest right in the middle of the "moderate" band (~20 words)
+        distance_from_center = abs(20 - word_count)
+        confidence = max(0.5, 0.85 - (distance_from_center / 100.0))
+        return {"tier": "moderate", "confidence": round(confidence, 2)}
+
 
 def score_student(student_contributions: list[dict], all_contributions: list[dict], consistency: float) -> dict:
     """consistency: 0-1, supplied by consistency.py (Step 5) — pass 0.0 until that's wired in."""
@@ -31,7 +75,7 @@ def score_student(student_contributions: list[dict], all_contributions: list[dic
     evidence = []
 
     for c in student_contributions:
-        classification = llm_classify(c["added_text"])
+        classification = _basic_classify(c["added_text"])
         tier, confidence = classification["tier"], classification["confidence"]
 
         tier_breakdown[tier] += c["word_count"]
