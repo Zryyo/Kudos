@@ -114,3 +114,8 @@ dmypy.json
 *.log
 *.sqlite3
 *.db
+
+# Ignore output
+output/*
+# But don't ignore the hidden .gitkeep file
+!output/.gitkeep
